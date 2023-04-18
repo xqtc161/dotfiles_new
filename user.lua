@@ -2,8 +2,18 @@ return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   { "m00qek/baleia.nvim" },
+  { "frabjous/knap" },
   {
     "folke/tokyonight.nvim",
+    lazy = false,
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+    command = "VimBeGood",
+    lazy = false,
+  },
+  {
+    "Eandrju/cellular-automaton.nvim",
     lazy = false,
   },
   {
@@ -25,6 +35,15 @@ return {
       "m00qek/baleia.nvim",
     },
   },
+  -- {
+  --   "mikesoylu/ai.vim",
+  --   lazy = false,
+  -- },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- },
+  { "Saecki/crates.nvim" },
   {
     "andweeb/presence.nvim",
     lazy = false,
@@ -46,7 +65,7 @@ return {
   },
   {
     "nvim-neorg/neorg",
-    ft = "norg", -- lazy load on filetype
+    ft = "norg",   -- lazy load on filetype
     cmd = "Neorg", -- lazy load on command, allows you to autocomplete :Neorg regardless of whether it's loaded yet
     --  (you could also just remove both lazy loading things)
     priority = 30, -- treesitter is on default priority of 50, neorg should load after it.
@@ -56,7 +75,7 @@ return {
           ["core.defaults"] = {},
           ["core.export"] = {},
           ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.norg.dirman"] = { -- Manages Neorg workspaces
+          ["core.norg.dirman"] = {      -- Manages Neorg workspaces
             config = {
               workspaces = {
                 notes = "~/notes",
